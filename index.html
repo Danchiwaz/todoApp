@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <section class="content">
+        <div class="main">
+            <div class="main__left">
+                <div class="main__section-input">
+                    <form action="" id="form">
+                        <div class="title">
+                            <label for="">Title:</label><br>
+                            <input id="idInput" type="text" style="display: none;">
+                            <input id="textInput" type="text" placeholder="Enter title" value="">
+                            <br>
+                            <div id="msg"></div>
+                        </div>
+                        <div class="description">
+                            <label for="">Description</label><br>
+                            <textarea  placeholder="Enter description" id="textarea" cols="30" rows="10"></textarea>
+                        </div>
+                        <div class="date">
+                            <label for="">Date Due:</label><br>
+                            <input id="dateInput" type="date" placeholder="Enter title" value="">
+                        </div>
+                        <div class="main__section-form-submit">
+                            <button id="add" class="btn">Add Task</button>
+                            <button type="button" onclick="updateTask(this)" style="display: none;" id="update-btn" class="btn">Update Task</button>
+                        </div>
+                    </form>
+                    
+                </div>
+            </div>
+            <div class="main__right">
+                <div class="filter__btns">
+                    <button onclick="renderTasks('all');" class="btn btn_flt">All tasks</button>
+                    <button onclick="renderTasks('complete')" class="btn_flt">Complete</button>
+                    <button onclick="renderTasks('incomplete')" class="btn_flt">Incomplete</button>
+                </div>
+                <ul id="tasks">
+                    <p style="margin-top: 3rem;">Sorry!There are no tasks currently</p>
+                </ul>
+            </div>
+           
+        </div>
+
+    </section>
+<script src="main.js"></script>
+</body>
+</html>
